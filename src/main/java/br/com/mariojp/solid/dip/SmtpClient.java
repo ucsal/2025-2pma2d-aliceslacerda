@@ -6,6 +6,5 @@ public class SmtpClient {
             throw new IllegalStateException("SMTP indisponível");
         }
         if(to == null || !to.contains("@")) throw new IllegalArgumentException("email inválido");
-        // envia ...
     }
 }
