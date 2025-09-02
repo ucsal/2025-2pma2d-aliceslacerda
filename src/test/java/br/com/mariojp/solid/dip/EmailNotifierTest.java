@@ -8,7 +8,7 @@ public class EmailNotifierTest {
     @Test
     void testWelcomeDryRunDoesNotThrow(){
         System.setProperty("DRY_RUN", "true");
-        EmailNotifier notifier = new EmailNotifier();
+        EmailNotifier notifier = new EmailNotifier(MailSenderFactory.create());
 
         User user = new User("Ana", "ana@gmail.com");
 

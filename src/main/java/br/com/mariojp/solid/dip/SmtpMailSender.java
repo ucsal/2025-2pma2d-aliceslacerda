@@ -2,16 +2,11 @@ package br.com.mariojp.solid.dip;
 
 public class SmtpMailSender implements MailSender{
 
-    private final SmtpClient smtpClient;
-
-    public SmtpMailSender(){
-        this.smtpClient = new SmtpClient();
-
-    }
+    private final SmtpClient client = new SmtpClient();
 
     @Override
-    public void send(String to, String subject, String body){
-smtpClient.send(to, subject, body);
+    public void send(String from, String to, String body){
+    client.send(from, to, body);
     }
 
 }
